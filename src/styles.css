@@ -1431,10 +1431,21 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
-  left: -300px;
+
   margin-top: 2rem;
   margin-bottom: 14rem;
   }
+  @media (max-width: 1000px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr); /* one column on very small screens */
+    }
+  }
+  @media (max-width: 650px) {
+    .projects-grid {
+      grid-template-columns: repeat(1, 1fr); /* one column on very small screens */
+    }
+  }
+  
 
   .project-card {
     position: relative;
